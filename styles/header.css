@@ -17,6 +17,7 @@
 }
 
 .left-section {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -41,6 +42,26 @@
 
 .youtube-logo {
     height: 20px;
+}
+
+.youtube-tool-tip {
+    font-family: Arial;
+    font-size: 12px;
+    position: absolute;
+    bottom: -24px;
+    background-color: gray;
+    color: white;
+    padding: 4px 5px;
+    border-radius: 2px;
+    opacity: 0;
+
+}
+
+.youtube-logo-div:hover .youtube-tool-tip {
+    opacity: 1;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.15s;
 }
 
 .middle-section {
@@ -129,15 +150,16 @@
     font-size: 12px;
     bottom: -30px;
     opacity: 0;
-    transition: opacity 0.15s;
     pointer-events: none;
     font-family: arial;
 }
+
 
 .search-icon-button:hover .tool-tip,
 .upload-icon-container:hover .tool-tip,
 .notification-icon-container:hover .tool-tip {
     opacity: 1;
+    transition: opacity 0.15s;
 }
 
 .voice-search-icon-button:hover .tool-tip,
@@ -198,4 +220,5 @@
 .my-channel-icon {
     height: 30px;
     border-radius: 15px;
+
 }
